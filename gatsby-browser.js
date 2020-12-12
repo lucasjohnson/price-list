@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from "react";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 
-// You can delete this file if you're not using it
+const client = new ApolloClient({
+  uri: "https://graphql.fauna.com/graphql",
+  request: operation => {
+    operation.setContext({
+      headers: {
+        Authorization: "Bearer fnAD85In55ACBVtjtozfN6YhQr8m-_zTHTzEPbxo"
+      },
+    })
+  }
+});
+
+export const wrapRootElement = ({ element }) => (
+  <ApolloProvider client={client}>{element}</ApolloProvider>
+);
