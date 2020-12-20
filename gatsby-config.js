@@ -31,13 +31,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-graphql`,
       options: {
-        typeName: "Fauna",
-        fieldName: "fauna",
-        url: "https://graphql.fauna.com/graphql",
+        typeName: `FAUNA`,
+        fieldName: `fauna`,
+        url: `https://graphql.fauna.com/graphql`,
         headers: {
-          Authorization: "Bearer fnAD85Gv4sACB2CmO8QaC4YWaoDuUTBn3CY7j8cm",
+          Authorization: `Bearer fnAD9dCehBACAW6YECn2ggTWUuQHsX51TpxIo2Ae`,
         },
       },
     }
