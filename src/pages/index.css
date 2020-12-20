@@ -1,0 +1,22 @@
+.header,
+.product-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product-items {
+  margin: 0;
+}
+
+.product-item {
+
+}
+
+.column {
+  flex: 1;
+  font-family: helvetica, sans-serif;
+}
+
+.header > .column {
+  font-weight: bold;
+}
